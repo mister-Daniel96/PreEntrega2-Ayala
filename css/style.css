@@ -477,94 +477,305 @@ body {
 
 /* SERVICIOSSSSSSSSSSSSSSSSSSSSSS */
 
-.main__servicios {
-   /*  min-height: 100vh; */
+.main__producto {
+    /*  min-height: 100vh; */
     background-color: rgba(0, 0, 0, 0.274);
-   /* margin-bottom: 305px; */
+    /* margin-bottom: 305px; */
 }
 
 .carousel {
     position: relative;
     z-index: 1;
-   
+
 }
-.d-block{
+
+.d-block {
     height: 500px;
     overflow: cover;
 }
-.carousel-caption> h5{
+
+.carousel-caption>h5 {
     text-transform: uppercase;
     font-size: 80px;
     font-weight: bold;
-    
+
 }
 
 /* GRIDDDDDDDD */
 
-.collage__title{
+.collage__title {
     display: flex;
     justify-content: center;
     padding: 40px 0 10px 0;
     margin-bottom: 20px;
     font-weight: bold;
-    border-bottom:3px solid  white;
+    border-bottom: 3px solid white;
 }
-.containerGrid{
+
+.containerGrid {
     width: 90%;
     height: 600px;
     margin: 0 auto;
     display: grid;
-    grid-template-areas: 
-    "item1 item2 item3 item4"
-    "item1 item5 item6 item6";
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        "item1 item5 item6 item6";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     overflow: hidden;
     gap: 5px;
 
-    
+
 }
-.grid-item{
+
+.grid-item {
     display: inherit;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   overflow: hidden;
-   place-items: center;
-   color: black;
-   font-size: 40px;
-   font-weight: bold;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    place-items: center;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
 }
-.item1{
+
+.grid-item:hover {
+    font-size: 50px;
+    text-shadow: 4px 4px black;
+    color: white
+}
+
+.item1 {
     grid-area: item1;
     background-image: url(../images/item1.jpg);
-    transition:  all 2s;
+    transition: all 1s;
 }
-.item1:hover{
-    background: linear-gradient(50deg, #243949 10%, #517fa400 100%), url(../images/item1.jpg);
+
+.item1:hover {
+    background: linear-gradient(0deg, #243949 10%, #517fa446 100%), url(../images/item1.jpg);
 }
-.item2{
+
+.item2 {
     grid-area: item2;
     background-image: url(../images/item2.jpg);
 
 }
-.item3{
+
+.item3 {
     grid-area: item3;
     background-image: url(../images/item3.jpg);
 
 }
-.item4{
+
+.item4 {
     grid-area: item4;
     background-image: url(../images/item4.jpg);
 
 }
-.item5{
+
+.item5 {
     grid-area: item5;
     background-image: url(../images/item2.jpg);
 
 }
-.item6{
+
+.item6 {
     grid-area: item6;
     background-image: url(../images/item6.jpg);
+
+}
+
+@media screen and (max-width:375px) {
+    .hero__main {
+
+        flex-direction: column-reverse;
+    }
+
+    .hero__texts {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hero__paragraph {
+        text-align: justify;
+    }
+
+    .hero__cta {
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+        ;
+    }
+
+    .hero__image {
+        width: 60%;
+        max-width: 600px;
+        /*  text-align: center; */
+    }
+
+    .hero__img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        /*     filter: drop-shadow(1px 1px  10px black);  Lo que hace es que se sobre pone*/
+    }
+
+    /* COMENTARIO */
+
+    .main {
+        margin-bottom: 200px;
+    }
+
+    .section__cards {
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+        gap: 20px;
+    }
+
+    .section__card {
+        width: 70%;
+    }
+
+    /* footer */
+
+
+    .footer__info {
+        width: 100%;
+    }
+
+    .footer__info p {
+        text-align: justify;
+    }
+
+    /* ============== */
+    .footer__redes {
+        width: 50%;
+        margin-top: 10px;
+    }
+
+
+    /* ==================== */
+    .footer__myInfo {
+        width: 50%;
+        margin-top: 10px;
+        padding-left: 20px;
+        border-left: 1px solid white;
+    }
+
+    .footer__myInfo h4 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer__container2 {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid black;
+    }
+
+
+
+    /* ===============PRODUCTO================================ */
+
+    .main__producto {
+        margin-bottom: 250px;
+    }
+
+    .d-block {
+        height: 300px;
+        overflow: cover;
+    }
+
+    /*. carousel-caption>h5 {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: bold;
+text-align: center;
+} */
+
+    /* GRIDDDDDDDD */
+
+    .collage__title {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .containerGrid {
+        width: 90%;
+        height: 400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+            "item1 item2 item3 "
+            "item1 item4 item5 "
+            "item6 item6 item5";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1rf;
+        gap: 5px;
+
+
+    }
+
+    .grid-item {
+        font-size: 20px;
+        color: white;
+    }
+
+    .grid-item:hover {
+        font-size: 25px;
+        text-shadow: 2px 2px black;
+  
+    }
+
+    .item1 {
+        grid-area: item1;
+        background-image: url(../images/item1.jpg);
+        transition: all 1s;
+    }
+
+    .item1:hover {
+        background: linear-gradient(0deg, #243949 10%, #517fa446 100%), url(../images/item1.jpg);
+    }
+
+    .item2 {
+        grid-area: item2;
+        background-image: url(../images/item2.jpg);
+
+    }
+
+    .item3 {
+        grid-area: item3;
+        background-image: url(../images/item3.jpg);
+
+    }
+
+    .item4 {
+        grid-area: item4;
+        background-image: url(../images/item4.jpg);
+
+    }
+
+    .item5 {
+        grid-area: item5;
+        background-image: url(../images/item2.jpg);
+
+    }
+
+    .item6 {
+        grid-area: item6;
+        background-image: url(../images/item6.jpg);
+
+    }
 
 }
